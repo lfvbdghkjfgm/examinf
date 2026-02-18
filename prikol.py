@@ -6,6 +6,16 @@ from tqdm import tqdm
 base = 'https://examinf.ru/'
 credents = ('your_login','your_password')
 
+
+#  Эта функция отправляет post запросы на сайт, пока не исчезнет ошибка
+#  Потенциалбно может перегрузить сайт!!! 
+
+#  принимает на вход:
+#  (часть ссылки после https://examinf.ru/ (например api/auth/register),
+#  requests сессию от которой будет выполняться запрос
+#  (опционально) json с данными для post запроса, которые отправятся как json)
+
+
 def post_requests(api:str,s:requests.session,json:dict ={}):
     while True:
         try:
@@ -15,6 +25,9 @@ def post_requests(api:str,s:requests.session,json:dict ={}):
         except:
             pass
 
+# регистрирует аккаунт
+# принимает на вход:
+# (номер аккаунта, аккаунты типовые, в никах отличается только номер)
     
 def register_account(num: int):
     s = requests.session()
@@ -24,6 +37,11 @@ def register_account(num: int):
 
     with open('creds.txt','a') as f:
         f.write(f'lfvb_test_{num} 1234\n')
+
+# создает requests сессию кокретного пользователя
+# принимает на вход:
+# (логин от аккаунта,
+#  пароль от аккаунта)
 
 def create_session(login:str,password:str):
     s = requests.session()
@@ -36,6 +54,13 @@ def create_session(login:str,password:str):
 
 def get_tasks(task_type:int):
     return requests.get(base+f'api/tasks/ids/ege/{task_type}/').json()['result']
+
+# ставит лайки на все задания кокретного типа от лица 1 пользователя
+# принимает на вход:
+# (логин,
+#  пароль,
+#  тип задания (число от 1 до 27),
+#  действие (1 - лайк, -1 - дизлайк, 0 - отмена лайка или дизлайка))
 
 def magic(login:str,password:str,task_type:int,action:int):
     s = create_session(login,password)
@@ -50,6 +75,14 @@ def magic(login:str,password:str,task_type:int,action:int):
     for task in tqdm(get_tasks(task_type)):
         post_requests(f'api/task/{task}/{st}/',s)
 
+
+# проверяет твой прогресс в выполнении заданий
+# Может учитывать скрытые задания, недоступные для выполнения!
+# принимает на вход:
+# (логин,
+#  пароль,
+#  тип задания (число от 1 до 27))
+
 def check_progress(login:str,password:str,task_type:int):
     if task_type not in range(1,28):
         return None
@@ -63,22 +96,17 @@ def check_progress(login:str,password:str,task_type:int):
         solve = r.get('result',0)
         if solve:
             solves+=1
-        else:
-            print(task)
     print(f'Вы решили заданий {task_type} типа: {solves}/{len(tasks)}')
     print(f'Это составляет {int(solves*100/len(tasks))}%')
 
-def get_answer_for_task(login:str,password:str,task_number:int):
-    s = create_session(login,password)
-    if not s:
-        return
-    r = s.get(base+f'api/task/{task_number}/answer_v2/my_answer/').json()
-    error = r.get('error',0)
-    if error:
-        print('Вы не решали эту задачу')
-    else:
-        answer = r['result']['data']['components'][0]['text']['value']
-        print(f'Правильный ответ: {answer}')
+
+# функция для накрутки лайков на конркетное задание
+# по умолчанию использует все существующие аккаунты подряд
+# принимает на вход:
+# (номера заданий в виде списка,
+#  действие (1 - лайк, -1 - дизлайк, 0 - отмена лайка или дизлайка),
+#  количество лайков, которые надо поставить)
+# количесство лайков, которые в итоге будут поставлены считается как min(количество аккаунтов, указанное количество лайков)
 
 def nacrutka(task_numbers:list,action,number):
     with open('creds.txt') as f:
@@ -100,5 +128,3 @@ def nacrutka(task_numbers:list,action,number):
             break
 
 
-
-check_progress(*credents, 17)
