@@ -4,7 +4,7 @@ import time
 from tqdm import tqdm
 
 base = 'https://examinf.ru/'
-credents = ('lfvbdghkjfgm','15761576')
+credents = ('your_login','your_password')
 
 def post_requests(api:str,s:requests.session,json:dict ={}):
     while True:
