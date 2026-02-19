@@ -105,31 +105,33 @@ def check_progress(login:str,password:str,task_type:int):
 
 
 # функция для накрутки лайков на конркетное задание
-# по умолчанию использует все существующие аккаунты подряд
+# аккаунты проверяются (например если данный аккаунт уже ставил лайк на задание, то код просто пропустит этот аккаунт
+# поэтому даже в случае небольшого количества необходимых лайков, он может сделать намного больше итераций)
 
 # принимает на вход:
-# (номера заданий в виде списка,
+# (номер задания,
 #  действие (1 - лайк, -1 - дизлайк, 0 - отмена лайка или дизлайка),
 #  количество лайков, которые надо поставить)
 
 # количество лайков, которые в итоге будут поставлены считается как min(количество аккаунтов, указанное количество лайков)
 
-def nacrutka(task_numbers:list,action,number):
+def nacrutka(task:int,action,number):
     with open('creds.txt') as f:
         creds = f.readlines()
+    if action == 1:
+            st = 'like'
+    elif action == -1:
+        st = 'dislike'
+    else:
+        st = 'unlike'
     for num, cred in tqdm(enumerate(creds,1)):
-        if num > 66:
-            break
         login,password = cred.split()
         s = create_session(login,password)
-        if action == 1:
-            st = 'like'
-        elif action == -1:
-            st = 'dislike'
-        else:
-            st = 'unlike'
-        for task in task_numbers:
-            post_requests(f'api/task/{task}/{st}/',s)
+        r = s.get(base+f'api/task/{task}/additionalInfo/').json()
+        if r['result']['likedByMe'] == True and action == 1 or r['result']['dislikedByMe'] == True and action == -1 or r['result']['dislikedByMe'] == False and r['result']['likedByMe'] == False and action == 0:
+            number+=1
+            continue
+        post_requests(f'api/task/{task}/{st}/',s)
         if num == number:
             break
 
