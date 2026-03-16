@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 
 
-# !!!! не делать много запросов на additionalInfo !!!!
+
 
 base = 'https://examinf.ru/'
 credents = ('your_login','your_password')
@@ -140,4 +140,3 @@ def nacrutka(task:int,action,number):
             break
 
 
-# !!!! не делать много запросов на additionalInfo !!!!
