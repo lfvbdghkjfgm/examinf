@@ -82,6 +82,21 @@ def magic(login:str,password:str,task_type:int,action:int):
     for task in tqdm(get_tasks(task_type)):
         post_requests(f'api/task/{task}/{st}/',s)
 
+def another_magic(login:str,password:str,action:int):
+    s = create_session(login,password)
+    if not s:
+        return
+    if action == 1:
+        st = 'like'
+    elif action == -1:
+            st = 'dislike'
+    else:
+        st = 'unlike'
+    for task in tqdm(range(1700)):
+        r = s.get(base+f'api/task/{task}/answer_v2/my_answer/').json()
+        solve = r.get('result',0)
+        if solve:
+            post_requests(f'api/task/{task}/{st}/',s)
 
 # проверяет твой прогресс в выполнении заданий
 # Может учитывать скрытые задания, недоступные для выполнения!
