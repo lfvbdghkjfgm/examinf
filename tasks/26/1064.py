@@ -23,9 +23,7 @@ for a,b in data.items():
             mx_line = max(mx_line,len_line)
             len_line=1
     mx_line = max(mx_line,len_line)
-    if mx_line > mx[1]:
-        mx = [a,mx_line]
-    elif mx_line == mx[1] and a < mx[0]:
+    if mx_line > mx[1] or mx_line == mx[1] and a < mx[0]:
         mx = [a,mx_line]
 
 print(*mx)
