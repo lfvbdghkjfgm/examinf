@@ -7,7 +7,6 @@ for a,b,c,d,e in nums:
     data.append([b+c+d+e,e,a])
 data.sort()
 res = []
-pol_res = []
 
 def get_data(score):
     return [i for i in data if i[0] == score]
