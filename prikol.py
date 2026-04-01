@@ -134,7 +134,7 @@ def check_progress(login:str,password:str,task_type:int):
 
 # количество лайков, которые в итоге будут поставлены считается как min(количество аккаунтов, указанное количество лайков)
 
-def nacrutka(task:int,action,number):
+def nacrutka(task:int,action:int,number:int):
     with open('creds.txt') as f:
         creds = f.readlines()
     if action == 1:
