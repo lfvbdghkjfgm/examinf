@@ -1,33 +1,16 @@
-
-nums = [[int(i) for i in x.split()] for x in open('1.txt')]
-
-sold = {}
-ost = {}
-price = {}
-tmp  = [i[1] for i in nums]
+text = [[int(i) for i in x.split()] for x in open(r"C:\Users\111\Downloads\514_3.txt")]
+data = {}
+tmp = [i[1] for i in text]
 sr = sum(tmp) / len(tmp)
-
-for a,b,c in nums:
-    if a not in price.keys():
-        price[a] = b
-
-for i in price.keys():
-    sold[i] = 0
-    ost[i] = 0
-
-for a,b,c in nums:
-    if b > sr:
-        if c == 0:
-            sold[a] += 1
-        if c == 1:
-            ost[a] += 1
-
-print([i for i in sold if sold[i] == max(sold.values())])
-print(sold[51786])
-print(sold[46481])
-print(price[51786])
-print(price[46481])
-print(ost[51786])
-print(ost[46481])
-
-print(sold[46481]*price[46481],ost[46481])
+for id, price, act in text:
+    if price < sr:
+        continue
+    if id not in data.keys():
+        data[id] = [id, price, 0, 0]
+    if act == 0:
+        data[id][2] += 1
+    else:
+        data[id][3] += 1
+data = list(data.values())
+data = sorted(data,key=lambda d: (-d[2],-d[1],d[3]))
+print(data[0][2]*data[0][1],data[0][3])
