@@ -1,6 +1,10 @@
 from math import dist
 
 nums = [[float(i.replace(',','.')) for i in x.split()] for x in open('file.txt')]
+
+# Сначала выводится количество кластеров, важно его проверить
+# Если количество кластеров слишком маленькое, надо уменишить k
+# Если слишком большое - увеличить k
 k = 1
 
 clusters = []
@@ -14,6 +18,8 @@ while nums:
     clusters.append(cluster)
 
 print(len(clusters))
+
+# Если в задаче есть доп условия, их надо вставить сюда
 
 centres = []
 
@@ -29,4 +35,6 @@ x = [i[0] for i in centres]
 y = [i[1] for i in centres]
 x = sum(x) / len(x)
 y = sum(y) / len(y)
+
+# В задаче может быть другой коэффициент, важно проверить!
 print(x*10_000,y*10_000)
