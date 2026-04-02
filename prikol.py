@@ -35,6 +35,9 @@ def post_requests(api:str,s:requests.session,json:dict ={}):
 # (номер аккаунта, аккаунты типовые, в никах отличается только номер)
     
 def register_account(num: int):
+    with open('creds.txt','r') as f:
+        if f"lfvb_test_{num} 1234" in f.readlines():
+            return None 
     s = requests.session()
     r = s.post(base+'api/auth/register/',json={'username': f"lfvb_test_{num}", 'password': '1234', 'email': f"test_{num}@123.ru"})
     r = s.post(base+'api/auth/register-confirm/',json={'username': f"lfvb_test_{num}", 'password': '1234', 'email': f"test_{num}@123.ru",'code':''})
@@ -81,6 +84,13 @@ def magic(login:str,password:str,task_type:int,action:int):
         st = 'unlike'
     for task in tqdm(get_tasks(task_type)):
         post_requests(f'api/task/{task}/{st}/',s)
+
+# ставит лайки на все решенные задания от лица 1 пользователя
+
+# принимает на вход:
+# (логин,
+#  пароль,
+#  действие (1 - лайк, -1 - дизлайк, 0 - отмена лайка или дизлайка))
 
 def another_magic(login:str,password:str,action:int):
     s = create_session(login,password)
