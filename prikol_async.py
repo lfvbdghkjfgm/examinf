@@ -1,6 +1,7 @@
 import asyncio
 import requests
 import re
+import threading
 from tqdm import tqdm
 
 
@@ -9,6 +10,14 @@ from tqdm import tqdm
 
 base = 'https://examinf.ru/'
 credents = ('your_login','your_password')
+MAX_CONCURRENT_REQUESTS = 20
+BATCH_SIZE = 100
+CREDS_FILE_LOCK = threading.Lock()
+
+
+def _chunked(items, size):
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
 
 
 #  Эта функция отправляет post запросы на сайт, пока не исчезнет ошибка
@@ -36,21 +45,32 @@ async def post_requests(api:str,s:requests.session,json:dict ={}):
     
 async def register_account(num: int):
     def _has_credentials():
-        with open('creds.txt','r') as f:
-            return f"lfvb_test_{num} 1234" in f.readlines()
+        with CREDS_FILE_LOCK:
+            with open('creds.txt','r') as f:
+                return f"lfvb_test_{num} 1234" in f.readlines()
 
     if await asyncio.to_thread(_has_credentials):
         return None 
     s = requests.session()
     r = await asyncio.to_thread(s.post,base+'api/auth/register/',json={'username': f"lfvb_test_{num}", 'password': '1234', 'email': f"test_{num}@123.ru"})
     r = await asyncio.to_thread(s.post,base+'api/auth/register-confirm/',json={'username': f"lfvb_test_{num}", 'password': '1234', 'email': f"test_{num}@123.ru",'code':''})
-    await asyncio.sleep(1)
 
     def _append_credentials():
-        with open('creds.txt','a') as f:
-            f.write(f'lfvb_test_{num} 1234\n')
+        with CREDS_FILE_LOCK:
+            with open('creds.txt','a') as f:
+                f.write(f'lfvb_test_{num} 1234\n')
 
     await asyncio.to_thread(_append_credentials)
+
+
+async def register_accounts(start:int,count:int,limit:int = MAX_CONCURRENT_REQUESTS):
+    sem = asyncio.Semaphore(limit)
+
+    async def _worker(num:int):
+        async with sem:
+            await register_account(num)
+
+    await asyncio.gather(*(_worker(num) for num in tqdm(range(start,start+count))))
 
 # создает requests сессию кокретного пользователя
 
@@ -90,8 +110,18 @@ async def magic(login:str,password:str,task_type:int,action:int):
             st = 'dislike'
     else:
         st = 'unlike'
-    for task in tqdm(await get_tasks(task_type)):
-        await post_requests(f'api/task/{task}/{st}/',s)
+    sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    tasks = await get_tasks(task_type)
+
+    async def _worker(task):
+        async with sem:
+            await post_requests(f'api/task/{task}/{st}/',s)
+
+    pbar = tqdm(total=len(tasks))
+    for chunk in _chunked(tasks,BATCH_SIZE):
+        await asyncio.gather(*(_worker(task) for task in chunk))
+        pbar.update(len(chunk))
+    pbar.close()
 
 # ставит лайки на все решенные задания от лица 1 пользователя
 
@@ -110,12 +140,22 @@ async def another_magic(login:str,password:str,action:int):
             st = 'dislike'
     else:
         st = 'unlike'
-    for task in tqdm(range(1700)):
-        res = await asyncio.to_thread(s.get,base+f'api/task/{task}/answer_v2/my_answer/')
-        r = await asyncio.to_thread(res.json)
-        solve = r.get('result',0)
-        if solve:
-            await post_requests(f'api/task/{task}/{st}/',s)
+    sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    all_tasks = list(range(1700))
+
+    async def _worker(task):
+        async with sem:
+            res = await asyncio.to_thread(s.get,base+f'api/task/{task}/answer_v2/my_answer/')
+            r = await asyncio.to_thread(res.json)
+            solve = r.get('result',0)
+            if solve:
+                await post_requests(f'api/task/{task}/{st}/',s)
+
+    pbar = tqdm(total=len(all_tasks))
+    for chunk in _chunked(all_tasks,BATCH_SIZE):
+        await asyncio.gather(*(_worker(task) for task in chunk))
+        pbar.update(len(chunk))
+    pbar.close()
 
 # проверяет твой прогресс в выполнении заданий
 # Может учитывать скрытые задания, недоступные для выполнения!
@@ -132,13 +172,23 @@ async def check_progress(login:str,password:str,task_type:int):
     if not s:
         return
     tasks = await get_tasks(task_type)
+    sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+
+    async def _worker(task):
+        async with sem:
+            res = await asyncio.to_thread(s.get,base+f'api/task/{task}/answer_v2/my_answer/')
+            r = await asyncio.to_thread(res.json)
+            solve = r.get('result',0)
+            if solve:
+                return 1
+            return 0
+
     solves = 0
-    for task in tasks:
-        res = await asyncio.to_thread(s.get,base+f'api/task/{task}/answer_v2/my_answer/')
-        r = await asyncio.to_thread(res.json)
-        solve = r.get('result',0)
-        if solve:
-            solves+=1
+    pbar = tqdm(total=len(tasks))
+    for chunk in _chunked(tasks,BATCH_SIZE):
+        solves += sum(await asyncio.gather(*(_worker(task) for task in chunk)))
+        pbar.update(len(chunk))
+    pbar.close()
     print(f'Вы решили заданий {task_type} типа: {solves}/{len(tasks)}')
     print(f'Это составляет {int(solves*100/len(tasks))}%')
 
@@ -180,8 +230,7 @@ async def nacrutka(task:int,action:int,number:int):
 
 
 async def main():
-    # Здесь писать то что нужно вызвать
-    pass
+    await another_magic('lfvbdghkjfgm','15761576',1)
 
 if __name__ == '__main__':
     asyncio.run(main())

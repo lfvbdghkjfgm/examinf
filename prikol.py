@@ -41,7 +41,6 @@ def register_account(num: int):
     s = requests.session()
     r = s.post(base+'api/auth/register/',json={'username': f"lfvb_test_{num}", 'password': '1234', 'email': f"test_{num}@123.ru"})
     r = s.post(base+'api/auth/register-confirm/',json={'username': f"lfvb_test_{num}", 'password': '1234', 'email': f"test_{num}@123.ru",'code':''})
-    time.sleep(1)
 
     with open('creds.txt','a') as f:
         f.write(f'lfvb_test_{num} 1234\n')
