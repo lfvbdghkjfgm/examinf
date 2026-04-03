@@ -230,7 +230,7 @@ async def nacrutka(task:int,action:int,number:int):
 
 
 async def main():
-    await another_magic('lfvbdghkjfgm','15761576',1)
+    pass
 
 if __name__ == '__main__':
     asyncio.run(main())
