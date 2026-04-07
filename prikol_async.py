@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 base = 'https://examinf.ru/'
 credents = ('your_login','your_password')
-MAX_CONCURRENT_REQUESTS = 20
+MAX_CONCURRENT_REQUESTS = 200
 BATCH_SIZE = 100
 CREDS_FILE_LOCK = threading.Lock()
 
