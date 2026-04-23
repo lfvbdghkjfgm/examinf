@@ -1,3 +1,4 @@
+from itertools import product
 res = []
 for d1 in '123456789':
     for l in range(10):
