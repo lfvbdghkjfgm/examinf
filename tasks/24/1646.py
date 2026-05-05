@@ -1,5 +1,4 @@
 import re
-from math import log
 
 text = open(r"C:\Users\aatop\Downloads\1646_1.txt").read()
 
