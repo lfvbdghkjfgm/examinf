@@ -1,3 +1,6 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
 nums = [[int(i) for i in x.split()] for x in open("1.txt")]
 
 data = {}

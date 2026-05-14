@@ -1,6 +1,9 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
 k = 400
 
-nums = [int(i) for i in open('1.txt')]
+nums = [int(i) for i in open("1.txt")]
 nums = sorted(nums)[::-1]
 res = []
 res1 = []
@@ -18,9 +21,9 @@ for i in range(len(nums)):
         if b + a <= k:
             right_indexes.remove(i)
             right_indexes.remove(j)
-            res.append([a,b])
+            res.append([a, b])
             break
     else:
         res1.append(a)
 
-print(len(res),sum(res1))
+print(len(res), sum(res1))

@@ -1,3 +1,6 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
 # решение 1
 import re
 

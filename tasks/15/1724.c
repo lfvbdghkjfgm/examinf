@@ -1,3 +1,9 @@
+
+/*
+    Solved by lfvbdghkjfgm
+    https://lfvb.ru
+*/
+
 #include <stdio.h>
 
 int main(void) {

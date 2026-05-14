@@ -1,3 +1,6 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
 import re
 
 text = open(r"C:\Users\111\Downloads\1483_1.txt").read()

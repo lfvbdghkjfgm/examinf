@@ -1,3 +1,6 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
 text = [[int(i) for i in x.split()] for x in open(r"C:\Users\111\Downloads\514_3.txt")]
 data = {}
 tmp = [i[1] for i in text]
@@ -12,5 +15,5 @@ for id, price, act in text:
     else:
         data[id][3] += 1
 data = list(data.values())
-data = sorted(data,key=lambda d: (-d[2],-d[1],d[3]))
-print(data[0][2]*data[0][1],data[0][3])
+data = sorted(data, key=lambda d: (-d[2], -d[1], d[3]))
+print(data[0][2] * data[0][1], data[0][3])

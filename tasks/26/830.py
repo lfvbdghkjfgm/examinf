@@ -1,3 +1,6 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
 data = [
     [int(i) for i in x.split()] for x in open(r"C:\Users\aatop\Downloads\830_1.txt")
 ]

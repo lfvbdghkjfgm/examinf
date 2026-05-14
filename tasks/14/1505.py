@@ -1,3 +1,7 @@
+# Solved by lfvbdghkjfgm
+# https://lfvb.ru
+
+
 def to_25(num):
     res = []
     while num:
