@@ -19,8 +19,6 @@ while nums:
 
 print(len(clusters))
 
-# Если в задаче есть доп условия, их надо вставить сюда
-
 centres = []
 
 for cluster in clusters:
