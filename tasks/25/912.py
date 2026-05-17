@@ -1,6 +1,7 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
+
 def primitive_roots(num):
     res = []
     i = 2
