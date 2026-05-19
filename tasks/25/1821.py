@@ -13,10 +13,10 @@ def dels(num):
     return res
 
 
-for i in range(1861, 10**10, 1861):
-    if re.fullmatch(r"3\d67\d*2\d1", str(i)):
+for i in range(1945, 10**10, 1945):
+    if re.fullmatch(r"6\d38\d*9\d5", str(i)):
         t = dels(i)
         if t:
             m = min(t) + max(t)
-            if m % 100 == 52:
-                print(i, max(t))
+            if m % 1000 == 792:
+                print(i, sum(map(int, str(m))))
