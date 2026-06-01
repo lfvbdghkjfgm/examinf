@@ -1,7 +1,7 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
-# Для извращенцев
+# Р”Р»СЏ РёР·РІСЂР°С‰РµРЅС†РµРІ
 
 nums = [int(i) for i in open(r"C:\Users\111\Downloads\1447_1.txt")]
 
@@ -13,7 +13,7 @@ for i in range(len(nums)):
 
 print(len(res), max(res))
 
-# Для нормальных людей
+# Р”Р»СЏ РЅРѕСЂРјР°Р»СЊРЅС‹С… Р»СЋРґРµР№
 
 nums = [int(i) for i in open(r"C:\Users\111\Downloads\1447_1.txt")]
 

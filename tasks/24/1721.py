@@ -1,7 +1,7 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
-# решение 1
+# СЂРµС€РµРЅРёРµ 1
 import re
 
 text = open(r"C:\Users\aatop\Downloads\1721_1.txt").read()
@@ -12,7 +12,7 @@ for i in "13579":
 m = re.findall(r"G(?:[^G*]*\*){45}[^G*]*", text)
 print(len(max(m, key=len)))
 
-# решение 2
+# СЂРµС€РµРЅРёРµ 2
 
 import re
 

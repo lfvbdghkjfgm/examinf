@@ -14,7 +14,8 @@ for i in range(len(nums) - 1):
         res.append(a + b)
 print(len(res), min(res))
 
-# Другой способ искать НОД двух чисел
+
+# Р”СЂСѓРіРѕР№ СЃРїРѕСЃРѕР± РёСЃРєР°С‚СЊ РќРћР” РґРІСѓС… С‡РёСЃРµР»
 def another_gcd(a, b):
     while b:
         a, b = b, a % b

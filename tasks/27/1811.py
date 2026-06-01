@@ -22,7 +22,7 @@ while data:
 
 print(len(clusters))
 
-# τΰιλ ΐ
+# Ρ„Π°ΠΉΠ» Π
 yellow_ct = []
 for cluster in clusters:
     ct = 0
@@ -32,7 +32,7 @@ for cluster in clusters:
     yellow_ct.append(ct)
 print(min(yellow_ct), max(yellow_ct))
 
-# τΰιλ Α
+# Ρ„Π°ΠΉΠ» Π‘
 blue_dist = []
 
 for cluster in clusters:

@@ -4,7 +4,7 @@
 from math import dist
 
 data = [[float(i.replace(",", ".")) for i in x.split()] for x in open("1.txt")]
-# для А k = 3 для Б k = 7
+# РґР»СЏ Рђ k = 3 РґР»СЏ Р‘ k = 7
 k = 7
 clusters = []
 

@@ -1,7 +1,7 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
-# Решение 1
+# Р РµС€РµРЅРёРµ 1
 nums = [int(x) for x in open("1.txt")]
 nums = nums[1:]
 nums.sort()
@@ -25,7 +25,7 @@ for i in range(len(nums)):
             break
 print(res)
 
-# Решение 2
+# Р РµС€РµРЅРёРµ 2
 
 stat = [0] * 101
 nums = [int(x) for x in open("1.txt")]

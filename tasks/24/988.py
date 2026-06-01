@@ -3,9 +3,9 @@
 
 import re
 
-with open('/home/student/Загрузки/988_1.txt') as f:
+with open("/home/student/Р—Р°РіСЂСѓР·РєРё/988_1.txt") as f:
     text = f.read()
 
-m = re.findall('(?:\.[A-Z]*?){7}',text)
+m = re.findall("(?:\.[A-Z]*?){7}", text)
 
-print(len(min(m,key=len)))
+print(len(min(m, key=len)))
