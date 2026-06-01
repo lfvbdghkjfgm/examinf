@@ -3,11 +3,13 @@
 
 import re
 
+
 def spl(lst, sep):
     res = []
     for i in lst:
         res += i.split(sep)
     return res
+
 
 text = open(r"C:\Users\aatop\Downloads\1647_1.txt").read()
 
