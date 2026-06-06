@@ -1,7 +1,8 @@
 # Solved by lfvbdghkfjgm
- # https://lfvb.ru
- 
- def prime_dels(num):
+# https://lfvb.ru
+
+
+def prime_dels(num):
     res = []
     i = 2
     while i <= int(num**0.5):

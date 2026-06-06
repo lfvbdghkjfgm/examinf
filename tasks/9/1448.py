@@ -20,3 +20,15 @@ for x in l:
     h = [i**2 for i in x if x.count(i) == 1]
     if len(set(w)) == 3 and sum(h) * 2 < (min(w) - max(w)) ** 2:
         print(c)
+
+# Solved by Данзан С.
+
+l = [[int(d) for d in x.split()] for x in open("32.txt")]
+k = 0
+for x in l:
+    k += 1
+    povt2 = [d for d in x if x.count(d) == 2]
+    if len(set(povt2)) == 3:
+        nepovt = [d for d in x if x.count(d) == 1]
+        if (max(povt2) - min(povt2)) ** 2 > (nepovt[0] ** 2 + nepovt[1] ** 2) * 2:
+            print(k, x)
