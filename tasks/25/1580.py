@@ -26,3 +26,26 @@ for i in range(750_000, 1, -1):
             k += 1
     if k == 5:
         break
+
+# Solved by Иван С.
+
+
+def prime_dels(num):
+    res = []
+    i = 2
+    while i <= int(num**0.5):
+        while num % i == 0:
+            res.append(i)
+            num //= i
+        i += 1
+    if num > 1:
+        res.append(num)
+    return set(res)
+
+
+for x in range(750000, 0, -1):
+    d = [x for x in prime_dels(x) if x % 10 == 7]
+    if d:
+        f = sum(d) // len(d)
+        if f % 111 == 0:
+            print(x, f)

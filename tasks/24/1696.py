@@ -11,3 +11,11 @@ group = rf"\((?:{A}[-+]{B})\)"
 
 m = re.findall(rf"(?:{group})+", text)
 print(len(max(m, key=len)))
+
+# Solved by Аня
+
+import re
+
+s = open("1696_1.txt").readline()
+m = re.findall(r"(?:\([1-9]\d*[12346789][+-][1-9]\d*[05]\))+", s)
+print(len(max(m, key=len)))

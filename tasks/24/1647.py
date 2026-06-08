@@ -33,3 +33,13 @@ for st in text:
     res = max(res, mx)
 
 print(res)
+
+# Solved by Аня
+
+import re
+
+d = []
+s = open("1647_1.txt").readline()
+m = re.findall(r"(?:[1-9]\d*[+*])+[1-9]\d*", s)
+print(max(m, key=len))
+print(len(max(m, key=len)) - 2)

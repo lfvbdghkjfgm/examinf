@@ -29,3 +29,26 @@ for i in text[1:]:
     i = "*".join(i)
     res.append("G" + i)
 print(len(max(res, key=len)))
+
+# Solved by Вадим С.
+
+import re
+
+l = open("1721_1.txt").readline()
+l = l.replace("1", "#")
+l = l.replace("3", "#")
+l = l.replace("5", "#")
+l = l.replace("7", "#")
+l = l.replace("9", "#")
+m = re.findall(r"G(?:[^G^#]*#){45}[^G^#]*", l)
+print(max(m, key=len))
+print(len(max(m, key=len)))
+
+# Solved by Анастасия
+
+import re
+
+m = open("1721.txt").readline()
+s = re.findall(r"G(?:[^13579G]*[13579]){45}[^13579G]*", m)
+print(max(s, key=len))
+print(len(max(s, key=len)))

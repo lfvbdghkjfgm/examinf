@@ -12,3 +12,12 @@ for i in nums:
         res.append(i)
 
 print(len(res), res[-1])
+
+# Solved by Глеб Г.
+
+l = [int(d) for d in open("1.txt")]
+tort = [l[0]]
+for x in l:
+    if abs(tort[-1] - x) >= 8:
+        tort.append(x)
+print(len(tort), tort[-1])

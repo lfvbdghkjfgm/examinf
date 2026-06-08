@@ -20,3 +20,25 @@ for i in range(1861, 10**10, 1861):
             m = min(t) + max(t)
             if m % 100 == 52:
                 print(i, max(t))
+
+# Solved by Данзан С.
+
+import fnmatch
+
+
+def dels(d):
+    l = []
+    for x in range(2, int(d**0.5) + 1):
+        if d % x == 0:
+            l.append(x)
+            l.append(d // x)
+    return sorted(set(l))
+
+
+for x in range(1861, 10**10, 1861):
+    if fnmatch.fnmatch(str(x), "3?67*2?1"):
+        l = dels(x)
+        if len(l) > 1:
+            M = max(l) + min(l)
+            if str(M)[-2:] == "52":
+                print(x, max(l))

@@ -34,3 +34,20 @@ for start in range(len(text)):
     active_string = ""
 
 print(max_len)
+
+# Solved by Влад
+
+from re import *
+
+f = open("test.txt")
+s = f.readline()
+s = s.replace("ZZ", "a")
+s = s.replace("YY", "b")
+s = s.replace("XX", "c")
+p = r"([abc])+"
+p2 = rf"(?=({p}))"
+res = []
+for x in finditer(p2, s):
+    if "aa" not in x.group(1) and "bb" not in x.group(1) and "cc" not in x.group(1):
+        res.append(len(x.group(1)))
+print(max(res) * 2)

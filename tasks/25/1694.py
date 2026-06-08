@@ -25,3 +25,33 @@ for i in range(5_700_001, 10**10):
             k += 1
     if k == 5:
         break
+
+# Solved by Иван П.
+
+
+def pros(n):
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return n > 1
+
+
+def m(n):
+    dels = []
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            if pros(i):
+                dels.append(i)
+            if pros(n // i):
+                dels.append(n // i)
+    if len(dels) == 0:
+        return 0
+    dels = sorted(set(dels))
+    return dels[0] + dels[-1]
+
+
+for n in range(5700000, 5800000):
+    mm = m(n)
+    if mm > 70000:
+        if int(mm**0.5) ** 2 == mm:
+            print(n, mm)

@@ -18,3 +18,17 @@ for idx, x in enumerate(nums, 1):
             res += 1
 
 print(res)
+
+# Solved by Иса
+
+k = 0
+l = [[int(d) for d in x.split()] for x in open("38")]
+for x in l:
+    povt1 = [d for d in x if x.count(d) == 1]
+    x = sorted(x)
+    if (x[-1] == x[-2] == x[-3] == x[-4] and len(povt1) == 4) or (
+        x[-1] == x[-2] == x[-3] and len(povt1) == 5
+    ):
+        if max(povt1) + min(povt1) <= sum(povt1) - max(povt1) - min(povt1):
+            k += 1
+print(k)

@@ -33,3 +33,32 @@ y = [i[1] for i in centres]
 x = sum(x) / len(x)
 y = sum(y) / len(y)
 print(abs(int(x * 10_000)), abs(int(y * 10_000)))
+
+# Solved by Данзан С.
+
+import math
+
+l = [[float(d.replace(",", ".")) for d in x.split()] for x in open("17_b.txt")]
+clusters = [[], [], []]
+for p in l:
+    if p[0] < 65:
+        clusters[0].append(p)
+    elif p[0] > 100:
+        clusters[1].append(p)
+    else:
+        clusters[2].append(p)
+centroids = [[], [], []]
+ind = 0
+for cluster in clusters:
+    mn_sm_rast = 10**10
+    for centroid in cluster:
+        sm_rast = 0
+        for p in cluster:
+            sm_rast += math.dist(centroid, p)
+        if sm_rast < mn_sm_rast:
+            mn_sm_rast = sm_rast
+            centroids[ind] = centroid
+    ind += 1
+Px = int((centroids[0][0] + centroids[1][0] + centroids[2][0]) / 3 * 10000)
+Py = int((centroids[0][1] + centroids[1][1] + centroids[2][1]) / 3 * 10000)
+print(Px, Py)

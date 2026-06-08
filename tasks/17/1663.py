@@ -16,3 +16,34 @@ for i in range(len(nums) - 2):
 
 
 print(res, sm)
+
+# Solved by Данзан С.
+
+l = [int(x) for x in open("41.txt")]
+ost15 = []
+kol = 0
+for x in range(len(l) - 2):
+    k = 0
+    if l[x] % 40 == 15:
+        k += 1
+    if l[x + 1] % 40 == 15:
+        k += 1
+    if l[x + 2] % 40 == 15:
+        k += 1
+    if k == 2:
+        ct = 0
+        if l[x] % 7 == 0:
+            ct += 1
+        if l[x + 1] % 7 == 0:
+            ct += 1
+        if l[x + 2] % 7 == 0:
+            ct += 1
+        if ct <= 2:
+            kol += 1
+            if l[x] % 40 != 15:
+                ost15.append(l[x])
+            if l[x + 1] % 40 != 15:
+                ost15.append(l[x + 1])
+            if l[x + 2] % 40 != 15:
+                ost15.append(l[x + 2])
+print(kol, sum(ost15))

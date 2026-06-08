@@ -21,3 +21,22 @@ for st in m:
                 if s == sorted(s, reverse=True):
                     res.append(st[start:])
 print(len(max(res, key=len)))
+
+# Solved by Иван С.
+
+from re import *
+
+s = open("1753_1.txt").readline()
+m = findall(r"[A-Z][^.]*[^ ]\.", s)
+mx = 0
+for x in m:
+    c = ""
+    for i in range(len(x) - 2, -1, -1):
+        c = x[i] + c
+        if c[0] == " ":
+            continue
+        lens = [len(j) for j in c.split()]
+        if sorted(lens, reverse=True) == lens:
+            mx = max(mx, len(c) + 1)
+
+print(mx)
