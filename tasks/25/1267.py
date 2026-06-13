@@ -20,3 +20,22 @@ for i in range(500_001, 10**10):
         k += 1
     if k == 5:
         break
+
+# Solved by Аня
+
+
+def dels(d):
+    s = []
+    for x in range(2, int(d**0.5) + 1):
+        if d % x == 0:
+            s.append(x)
+            s.append(d // x)
+    return sorted(set(s))
+
+
+for x in range(500_001, 10**6):
+    m = dels(x)
+    if len(m) > 0:
+        r = sum(m)
+        if str(r)[-1] == "9":
+            print(x, r)
