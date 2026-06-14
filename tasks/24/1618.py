@@ -1,4 +1,4 @@
-# Solved by lfvbdghkfjgm
+# Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
 text = open(r"C:\Users\aatop\Downloads\1618_1.txt").readlines()

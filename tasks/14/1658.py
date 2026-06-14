@@ -1,4 +1,4 @@
-# Solved by lfvbdghkfjgm
+# Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
 

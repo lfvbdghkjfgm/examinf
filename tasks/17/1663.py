@@ -1,4 +1,4 @@
-# Solved by lfvbdghkfjgm
+# Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
 nums = [int(i) for i in open(r"C:\Users\111\Downloads\1663_1.txt")]

@@ -1,4 +1,4 @@
-# Solved by lfvbdghkfjgm
+# Solved by lfvbdghkjfgm
 # https://lfvb.ru
 
 text = open(r"C:\Users\aatop\Downloads\1631_1.txt").read().strip()
