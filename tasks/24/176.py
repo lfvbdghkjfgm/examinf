@@ -1,5 +1,6 @@
 # Solved by София
 
+
 import re
 
 s = open("1").readlines()

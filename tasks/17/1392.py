@@ -1,5 +1,6 @@
 # Solved by Иван С.
 
+
 m = []
 l = [int(x) for x in open("df.txt")]
 mn = min([x for x in l if x > 0 and len(str(x)) == 4 and x % 10 == 6])
@@ -13,6 +14,7 @@ for i in range(len(l) - 2):
 print(len(m), max(m))
 
 # Solved by Глеб Г.
+
 
 l = [int(d) for d in open("36.txt")]
 q = []

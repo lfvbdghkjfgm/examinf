@@ -18,6 +18,7 @@ print(res)
 
 # Solved by Иса
 
+
 m = []
 for a in range(1, 1001):
     k = 0

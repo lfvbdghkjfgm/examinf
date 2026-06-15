@@ -1,5 +1,6 @@
 # Solved by Иса
 
+
 l = [[int(d) for d in x.split()] for x in open("37")]
 k = 0
 for x in l:

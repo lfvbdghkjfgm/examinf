@@ -1,5 +1,6 @@
 # Solved by Анастасия
 
+
 s = open("1415.txt").readline()
 s = s.split("X")
 mn_ln = []

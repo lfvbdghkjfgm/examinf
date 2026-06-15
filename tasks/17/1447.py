@@ -32,6 +32,7 @@ print(len(res), max(res))
 
 # Solved by Владимир Д.
 
+
 l = [int(x) for x in open("other/examinf/17/1447.txt")]
 ct = 0
 mxsm = 0

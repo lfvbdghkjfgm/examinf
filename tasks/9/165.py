@@ -13,8 +13,8 @@ for x in l:
                 print(x, a)
 print(ct)
 
-
 # Solved by Анастасия
+
 
 l = [sorted([int(d) for d in x.split()]) for x in open("165.txt")]
 ct = 0

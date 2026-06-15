@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 l = [int(x) for x in open("other/examinf/17/944.txt")]
 mx8 = max([x for x in l if str(abs(x))[0] == "8"])
 ct = 0

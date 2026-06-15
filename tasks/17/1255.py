@@ -1,5 +1,6 @@
 # Solved by Данзан С.
 
+
 l = [int(x) for x in open("42.txt")]
 ct32 = len([d for d in l if d % 32 == 0])
 mx = []
@@ -15,6 +16,7 @@ for x in range(len(l) - 2):
 print(len(mx), max(mx))
 
 # Solved by Вадим С.
+
 
 l = [int(x) for x in open("1255_1.txt")]
 c = []

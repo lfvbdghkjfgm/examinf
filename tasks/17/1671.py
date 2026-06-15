@@ -1,5 +1,6 @@
 # Solved by Глеб Г.
 
+
 l = [int(d) for d in open("33.txt")]
 q = []
 max37 = max([d for d in l if str(d)[-2:] == "37"])

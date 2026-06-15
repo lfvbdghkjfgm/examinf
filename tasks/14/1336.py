@@ -1,5 +1,6 @@
 # Solved by Тимур А.
 
+
 for x in range(0, 22):
     c1 = (
         10 * 22**6

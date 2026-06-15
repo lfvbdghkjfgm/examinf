@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from re import *
 
 f = open("test.txt")
@@ -15,6 +16,7 @@ for l in range(len(s)):
 print(m)
 
 # Solved by София
+
 
 s = open("1").readline()
 m = 0

@@ -32,6 +32,7 @@ print(len(max(res, key=len)))
 
 # Solved by Вадим С.
 
+
 import re
 
 l = open("1721_1.txt").readline()
@@ -45,6 +46,7 @@ print(max(m, key=len))
 print(len(max(m, key=len)))
 
 # Solved by Анастасия
+
 
 import re
 

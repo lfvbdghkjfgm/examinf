@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 import re
 
 s = open("/home/student/Загрузки/826_1.txt").readline()
@@ -8,6 +9,7 @@ m = re.findall(r"A+(?:[1-9]+[-*])+\d+", s)
 print(len(max(m, key=len)))
 
 # Solved by Влад
+
 
 from re import *
 

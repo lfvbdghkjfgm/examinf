@@ -1,5 +1,6 @@
 # Solved by София
 
+
 import math
 
 l = [[int(d) for d in x.split()] for x in open("438_1.csv")]

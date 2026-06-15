@@ -1,5 +1,6 @@
 # Solved by София
 
+
 l = [[int(d) for d in x.split()] for x in open("1239_1.csv")]
 ct = 0
 for x in l:

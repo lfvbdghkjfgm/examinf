@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 with open("other/examinf/24/1090.txt") as f:
     s = f.readline()
 

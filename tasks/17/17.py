@@ -1,5 +1,6 @@
 # Solved by Константин Х.
 
+
 l = [int(x) for x in open("15.txt")]
 srar = sum([d for d in l]) / len(l)
 mn = []
@@ -20,6 +21,7 @@ for x in range(len(l) - 1):
 print(len(mn), min(mn))
 
 # Solved by Глеб Г.
+
 
 l = [int(d) for d in open("37.txt")]
 q = []

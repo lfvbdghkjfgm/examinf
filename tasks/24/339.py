@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from re import *
 
 f = open("test.txt")

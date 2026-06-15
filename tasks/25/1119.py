@@ -12,6 +12,7 @@ for i in range(123456789, 10**14, 123456789):
 
 # Solved by Владимир Д.
 
+
 import fnmatch
 
 mask = "7?3?5*9"

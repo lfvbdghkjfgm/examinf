@@ -12,6 +12,7 @@ for i in net.hosts():
 
 # Solved by Владимир Д.
 
+
 import ipaddress
 
 net = ipaddress.ip_network("46.29.170.214/255.255.128.0", strict=False)

@@ -26,6 +26,7 @@ for A in range(1, 10000):
 
 # Solved by Иса
 
+
 for a in range(1, 2000):
     k = 0
     for x in range(1, 10001):

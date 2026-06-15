@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 import re
 
 s = open("/home/student/Загрузки/1125_1.txt").readline()

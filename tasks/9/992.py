@@ -1,5 +1,6 @@
 # Solved by Данзан С.
 
+
 import math
 
 ct = 0
@@ -14,6 +15,7 @@ for x in l:
 print(ct)
 
 # Solved by Владислав Ф.
+
 
 import math
 

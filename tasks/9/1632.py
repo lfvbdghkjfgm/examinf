@@ -14,6 +14,7 @@ print(res)
 
 # Solved by Владимир Д.
 
+
 l = [[int(d) for d in x.split()] for x in open("other/examinf/9/1632.txt")]
 ct = 0
 

@@ -14,6 +14,7 @@ print(res)
 
 # Solved by София
 
+
 import ipaddress
 
 ct = 0

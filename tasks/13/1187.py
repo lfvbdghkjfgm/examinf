@@ -8,6 +8,7 @@ print(list(net.hosts())[0])
 
 # Solved by Анастасия
 
+
 import ipaddress
 
 ct = 0

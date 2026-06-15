@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 f = open("test.txt")
 s = f.readline()
 m = 0

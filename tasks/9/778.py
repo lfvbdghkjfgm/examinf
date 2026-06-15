@@ -1,5 +1,6 @@
 # Solved by Иван П.
 
+
 a = [[int(d) for d in x.split()] for x in open("9.txt")]
 c = 0
 for e in a:

@@ -37,6 +37,7 @@ print(abs(int(x * 10_000)), abs(int(y * 10_000)))
 
 # Solved by Анастасия
 
+
 # l=[[float(d.replace(',','.')) for d in x.split()] for x in open('1304.a.txt')]
 # clusters=[[],[]]
 # for p in l:
@@ -89,6 +90,7 @@ Py = int(((centoids[0][1] + centoids[1][1] + centoids[2][1]) / 3) * 10000)
 print(Px, Py)
 
 # Solved by София
+
 
 """l=[[float(d.replace(',','.'))for d in x.split()]for x in open('1_a')]
 clusters=[[],[]]

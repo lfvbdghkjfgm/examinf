@@ -1,5 +1,6 @@
 # Solved by Аня
 
+
 import fnmatch
 
 for x in range(2024, 10**10, 2024):
@@ -8,6 +9,7 @@ for x in range(2024, 10**10, 2024):
             print(x, x // 2024)
 
 # Solved by Владимир Д.
+
 
 import fnmatch
 

@@ -27,6 +27,7 @@ print(res, max([i[2] for i in computers]))
 
 # Solved by Владимир Д.
 
+
 l = [[int(d) for d in x.split()] for x in open("examinf/26/1899.txt")]
 l = sorted(l)
 comps = []

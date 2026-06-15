@@ -12,6 +12,7 @@ print(len(max(m, key=len)))
 
 # Solved by Влад
 
+
 from re import *
 
 f = open("test.txt")

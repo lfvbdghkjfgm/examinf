@@ -29,6 +29,7 @@ print(len(bash), bash[-1][1][0])
 
 # Solved by Анастасия
 
+
 l = [
     x.replace("G", "2").replace("R", "1").replace("B", "3").split()
     for x in open("29.txt")

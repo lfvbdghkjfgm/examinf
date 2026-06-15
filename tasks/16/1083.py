@@ -1,5 +1,6 @@
 # Solved by Данзан С.
 
+
 import sys, functools
 
 sys.setrecursionlimit(1000000)
@@ -20,6 +21,7 @@ for x in range(15000):
 print(F(14750))
 
 # Solved by Мария
+
 
 import sys, functools
 

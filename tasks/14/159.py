@@ -1,5 +1,6 @@
 # Solved by Константин Х.
 
+
 for x in range(0, 17):
     c1 = (
         8 * 17**7
@@ -36,6 +37,7 @@ for x in range(0, 17):
         print((c1 + c2 + c3) / 16)
 
 # Solved by София
+
 
 import string
 

@@ -21,6 +21,7 @@ print(res)
 
 # Solved by Иса
 
+
 k = 0
 l = [[int(d) for d in x.split()] for x in open("38")]
 for x in l:

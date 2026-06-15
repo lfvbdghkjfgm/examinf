@@ -1,5 +1,6 @@
 # Solved by Анастасия
 
+
 l = [sorted([int(d) for d in x.split()]) for x in open("163.txt")]
 ct = 0
 for x in l:

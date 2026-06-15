@@ -1,5 +1,6 @@
 # Solved by Данзан С.
 
+
 import fnmatch
 
 for x in range(27451, 10**10, 27451):
@@ -8,6 +9,7 @@ for x in range(27451, 10**10, 27451):
             print(x, x // 27451)
 
 # Solved by Глеб Г.
+
 
 import fnmatch
 

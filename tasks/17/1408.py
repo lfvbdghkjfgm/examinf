@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 l = [int(x) for x in open("other/examinf/17/1408.txt")]
 min_17 = min([x for x in l if x % 17 == 0 and len(str(abs(x))) == 4]) ** 2
 

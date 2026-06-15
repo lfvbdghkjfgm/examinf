@@ -15,6 +15,7 @@ print(sum(map(int, str(b))))
 
 # Solved by Иван П.
 
+
 a = 7 * 5**1984 - 6 * 25**777 + 5 * 125**333 - 4
 c = 0
 while a > 0:

@@ -19,6 +19,7 @@ print(res, sm)
 
 # Solved by Данзан С.
 
+
 l = [int(x) for x in open("41.txt")]
 ost15 = []
 kol = 0

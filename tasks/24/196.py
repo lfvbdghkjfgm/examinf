@@ -1,5 +1,6 @@
 # Solved by Иван С.
 
+
 s = open("196_1.txt").readline()
 k = 1
 mx = 1
@@ -12,6 +13,7 @@ for i in range(1, len(s)):
 print(mx)
 
 # Solved by Влад
+
 
 a = []
 f = open("1.txt")

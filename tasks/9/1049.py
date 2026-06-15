@@ -1,5 +1,6 @@
 # Solved by Данзан С.
 
+
 l = [[int(d) for d in x.split()] for x in open("31.txt")]
 k = 0
 for x in l:

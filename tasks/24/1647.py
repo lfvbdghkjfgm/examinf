@@ -36,6 +36,7 @@ print(res)
 
 # Solved by Аня
 
+
 import re
 
 d = []

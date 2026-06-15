@@ -1,5 +1,6 @@
 # Solved by Константин Х.
 
+
 import itertools
 
 ct = 0

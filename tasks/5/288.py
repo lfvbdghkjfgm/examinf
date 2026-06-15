@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 a = []
 
 
@@ -25,6 +26,7 @@ for n in range(11, 1000):
 print(min(a))
 
 # Solved by Илья М.
+
 
 b = []
 

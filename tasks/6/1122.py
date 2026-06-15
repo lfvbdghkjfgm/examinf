@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 from turtle import done, dot, down, fd, lt, pendown, rt, setpos, tracer, up
 
 pendown()

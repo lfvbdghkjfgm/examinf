@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 a = [int(x) for x in open("test.txt")]
 tr = []
 mx = max([int(x) for x in a if int(x) % 100 == 17])
@@ -15,6 +16,7 @@ for i in range(len(a) - 2):
 print(len(tr), max(tr))
 
 # Solved by Вадим С.
+
 
 l = [int(d) for d in open("388_1.txt")]
 c = []

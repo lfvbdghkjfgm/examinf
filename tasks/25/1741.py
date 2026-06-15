@@ -23,6 +23,7 @@ for i in range(1861, 10**10, 1861):
 
 # Solved by Данзан С.
 
+
 import fnmatch
 
 

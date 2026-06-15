@@ -1,5 +1,6 @@
 # Solved by Мария
 
+
 for A in range(1, 100000):
     can = True
     for x in range(1, 100000):

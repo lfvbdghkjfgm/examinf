@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from sys import *
 
 setrecursionlimit(10**9)
@@ -30,6 +31,7 @@ print(f(2540))
 print(1 * 5 * 2 * 6 * 5 * 2)
 
 # Solved by Мария
+
 
 import functools
 

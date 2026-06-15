@@ -1,5 +1,6 @@
 # Solved by София
 
+
 for x in range(0, 95):
     for y in range(95):
         a = 5 + x * 95 + y * 95**2 + x * 95**3 + 1 * 95**4
@@ -8,6 +9,7 @@ for x in range(0, 95):
             print(hex((a + b) // 4221)[2:], x)
 
 # Solved by Владимир Д.
+
 
 for x in range(95):
     for y in range(95):

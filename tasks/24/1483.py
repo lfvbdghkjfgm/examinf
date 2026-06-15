@@ -12,6 +12,7 @@ print(len(mx) + 87 * 2)
 
 # Solved by Владимир Д.
 
+
 import re
 
 s = open("/home/student/Загрузки/1483_1.txt").readline().replace("CDE", "#")

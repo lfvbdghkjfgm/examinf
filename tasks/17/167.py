@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 f = open("test.txt")
 a = []
 for s in f:

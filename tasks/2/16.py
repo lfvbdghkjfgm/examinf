@@ -1,5 +1,6 @@
 # Solved by Вадим С.
 
+
 import itertools
 
 
@@ -15,6 +16,7 @@ for i in itertools.product([0, 1], repeat=7):
                 print(j)
 
 # Solved by Артем А.
+
 
 print("x y z w")
 for x in range(0, 2):

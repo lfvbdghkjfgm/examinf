@@ -19,6 +19,7 @@ print(res)
 
 # Solved by София
 
+
 l = [[int(d) for d in x.split()] for x in open("1")]
 ct = 0
 for x in l:

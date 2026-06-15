@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from re import *
 
 s = open("986_1.txt").readline()

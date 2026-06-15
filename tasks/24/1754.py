@@ -10,6 +10,7 @@ print(len(max(m, key=len)))
 
 # Solved by Анастасия
 
+
 import re
 
 m = open("1754.txt").readline()
@@ -19,6 +20,7 @@ print((max(s, key=len)))
 
 # Solved by Иван С.
 
+
 from re import *
 
 s = open("1754_1.txt").readline()
@@ -26,6 +28,7 @@ m = findall(r"(?:[^M.]*M){112}[^M.]*\.", s)
 print(len(max(m, key=len)))
 
 # Solved by София
+
 
 import re
 

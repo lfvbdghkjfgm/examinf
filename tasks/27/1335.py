@@ -36,6 +36,7 @@ print(abs(int(x * 10_000)), abs(int(y * 10_000)))
 
 # Solved by Данзан С.
 
+
 import math
 
 l = [[float(d.replace(",", ".")) for d in x.split()] for x in open("17_b.txt")]
@@ -64,6 +65,7 @@ Py = int((centroids[0][1] + centroids[1][1] + centroids[2][1]) / 3 * 10000)
 print(Px, Py)
 
 # Solved by Анастасия
+
 
 # l=[[float(d.replace(',','.')) for d in x.split()] for x in open('1335.a.txt')]
 # cl=[[],[]]

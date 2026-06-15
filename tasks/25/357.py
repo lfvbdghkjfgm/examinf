@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 import fnmatch
 
 mask = "7*53?3*1"

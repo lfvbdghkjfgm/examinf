@@ -1,5 +1,6 @@
 # Solved by София
 
+
 l = [[int(d) for d in x.split()] for x in open("1448_1.csv")]
 k = 0
 for x in l:
@@ -12,6 +13,7 @@ for x in l:
 
 # Solved by Вадим С.
 
+
 l = [[int(d) for d in x.split()] for x in open("1700_1.txt")]
 c = 0
 for x in l:
@@ -22,6 +24,7 @@ for x in l:
         print(c)
 
 # Solved by Данзан С.
+
 
 l = [[int(d) for d in x.split()] for x in open("32.txt")]
 k = 0

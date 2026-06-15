@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from math import *
 
 f = open("test.txt")

@@ -1,5 +1,6 @@
 # Solved by Иван С.
 
+
 m = []
 l = [int(x) for x in open("1.txt")]
 mx = max([x for x in l if len(str(abs(x))) == 4])

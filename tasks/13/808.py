@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 import ipaddress
 
 ip = "121.96.174.205"

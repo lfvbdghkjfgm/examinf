@@ -15,6 +15,7 @@ for x in nums:
 
 # Solved by София
 
+
 l = [[int(d) for d in x.split()] for x in open("1859_1.csv")]
 k = 0
 for x in l:
@@ -27,6 +28,7 @@ for x in l:
             print(k, x)
 
 # Solved by Аня
+
 
 l = [[int(d) for d in x.split()] for x in open("1859.txt")]
 k = 0

@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 import re
 
 file = open(r"/home/student/Загрузки/987_1.txt").readline()
@@ -17,6 +18,7 @@ print(max(match2, key=len))
 print(len(max(match2, key=len)))
 
 # Solved by Влад
+
 
 from re import *
 

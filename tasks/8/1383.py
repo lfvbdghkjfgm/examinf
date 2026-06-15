@@ -1,5 +1,6 @@
 # Solved by Арина
 
+
 import itertools
 
 k = 0

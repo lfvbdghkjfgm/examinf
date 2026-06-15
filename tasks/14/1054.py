@@ -1,5 +1,6 @@
 # Solved by Арина
 
+
 for x in "0123456789ABCDEFGHIJKLM":
     s1 = int(f"11353{x}12", 23)
     s2 = int(f"135{x}21", 23)
@@ -7,6 +8,7 @@ for x in "0123456789ABCDEFGHIJKLM":
         print((s1 + s2) // 22)
 
 # Solved by София
+
 
 from string import *
 
@@ -17,6 +19,7 @@ for x in printable[:23]:
         print(x, (a + b) // 22)
 
 # Solved by Анастасия
+
 
 for x in range(0, 23):
     c1 = (

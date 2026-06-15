@@ -15,6 +15,7 @@ print(len(res), res[-1])
 
 # Solved by Глеб Г.
 
+
 l = [int(d) for d in open("1.txt")]
 tort = [l[0]]
 for x in l:

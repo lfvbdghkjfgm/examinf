@@ -24,6 +24,7 @@ for i in sorted(res):
 
 # Solved by Владимир Д.
 
+
 for mid_len in range(6):
     for mid in range(10**mid_len):
         star = str(mid).zfill(mid_len)

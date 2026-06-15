@@ -1,5 +1,6 @@
 # Solved by Анастасия
 
+
 s = open("328.txt").readline()
 s = s.split("CD")
 mx_ln = []
@@ -11,6 +12,7 @@ for x in range(len(s) - 50):
 print(max(mx_ln) + 2 * 50 + 2)
 
 # Solved by Иван П.
+
 
 s = open("324.txt").readline()
 s = s.replace("CD", "C D").split()
@@ -25,6 +27,7 @@ print(maxl)
 
 # Solved by Глеб Г.
 
+
 s = open("21.txt").readline()
 s = s.split("CD")
 mx_ln = []
@@ -36,6 +39,7 @@ for x in range(len(s) - 50):
 print(max(mx_ln))
 
 # Solved by Вадим С.
+
 
 l = open("328_1.txt").readline().split("CD")
 cl = []

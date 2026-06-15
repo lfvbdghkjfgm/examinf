@@ -15,6 +15,7 @@ for a in range(500, 0, -1):
 
 # Solved by Аня
 
+
 for a in range(0, 1000):
     can = True
     for x in range(0, 1000):

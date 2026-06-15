@@ -16,6 +16,7 @@ print(len(res) / 3, sum(set(res)) / len(set(res)))
 
 # Solved by Влад
 
+
 a = [int(x) for x in open("test.txt")]
 tr = []
 ch = max([x for x in a if str(x)[-1] == "7"])

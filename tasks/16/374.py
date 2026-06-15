@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from functools import *
 
 
@@ -26,6 +27,7 @@ for n in range(19, 673):
 print(f(673))
 
 # Solved by Анастасия
+
 
 import sys
 

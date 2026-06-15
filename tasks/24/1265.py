@@ -1,5 +1,6 @@
 # Solved by Глеб Г.
 
+
 import re
 
 s = open("20.txt").readline()
@@ -8,6 +9,7 @@ print(max(m, key=len))
 print(len(max(m, key=len)))
 
 # Solved by Аня
+
 
 import re
 

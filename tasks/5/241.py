@@ -1,5 +1,6 @@
 # Solved by Илья М.
 
+
 for N in range(1000):
     r = bin(N)[2:]
     r = r[::-1]

@@ -1,5 +1,6 @@
 # Solved by Владимир Д.
 
+
 import re
 
 s = open("/home/student/Загрузки/731_1.txt").readline()
@@ -7,6 +8,7 @@ s = open("/home/student/Загрузки/731_1.txt").readline()
 print(len(max(re.findall(r"[C-Z]+A[C-Z]+B[C-Z]+", s), key=len)))
 
 # Solved by Влад
+
 
 f = open("test.txt")
 s = f.readline()

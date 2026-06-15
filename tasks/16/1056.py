@@ -1,5 +1,6 @@
 # Solved by Влад
 
+
 from functools import *
 
 

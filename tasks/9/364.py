@@ -20,8 +20,8 @@ for x in l:
         ct += 1
 print(ct)
 
-
 # Solved by София
+
 
 l = [[int(d) for d in x.split()] for x in open("364_1.csv")]
 ct = 0

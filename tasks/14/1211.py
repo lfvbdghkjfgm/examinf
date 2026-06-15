@@ -1,5 +1,6 @@
 # Solved by София
 
+
 from string import *
 
 for x in printable[:22]:

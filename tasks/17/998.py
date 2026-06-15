@@ -24,6 +24,7 @@ def another_gcd(a, b):
 
 # Solved by Григорий Б.
 
+
 import math
 
 l = [int(d) for d in open("998.txt")]
@@ -35,6 +36,7 @@ for x in range(len(l) - 1):
 print(len(A), min(A))
 
 # Solved by Глеб Г.
+
 
 q = []
 

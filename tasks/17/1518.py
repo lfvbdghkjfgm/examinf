@@ -15,6 +15,7 @@ print(len(res), min(res))
 
 # Solved by Владимир Д.
 
+
 l = [int(d) for d in open("examinf/17/1518.txt")]
 mn_102 = min([d for d in l if d > 0 and d % 1000 == 102])
 ct = 0

@@ -19,6 +19,7 @@ print(len(res), max(res))
 
 # Solved by Глеб Г.
 
+
 l = [int(d) for d in open("34.txt")]
 w = []
 mx = max(l)
@@ -35,6 +36,7 @@ for x in range(len(l) - 2):
 print(len(w), max(w))
 
 # Solved by Владимир Д.
+
 
 from math import prod
 

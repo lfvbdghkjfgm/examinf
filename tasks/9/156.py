@@ -1,5 +1,6 @@
 # Solved by Анастасия
 
+
 l = [[int(d) for d in x.split()] for x in open("156")]
 ct = 0
 for x in l:
@@ -12,6 +13,7 @@ for x in l:
 print(ct)
 
 # Solved by Глеб Г.
+
 
 l = [[int(d) for d in x.split()] for x in open("31.txt")]
 ct = 0

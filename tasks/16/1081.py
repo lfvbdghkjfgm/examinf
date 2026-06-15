@@ -1,5 +1,6 @@
 # Solved by Анастасия
 
+
 import sys
 
 sys.setrecursionlimit(1000000)
@@ -15,6 +16,7 @@ def f(n):
 print((sum(map(int, str(f(57693))))) ** 2)
 
 # Solved by Аня
+
 
 import sys, functools
 
