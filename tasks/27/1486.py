@@ -3,7 +3,6 @@
 
 from math import dist
 
-
 with open("other/examinf/27/1486A.txt") as f:
     points = [list(map(float, s.replace(",", ".").split())) for s in f]
     clusters = []
@@ -32,7 +31,6 @@ print(P_x, P_y)
 # Вторая часть решения
 
 from math import dist
-
 
 with open("other/examinf/27/1486B.txt") as f:
     points = [list(map(float, s.replace(",", ".").split())) for s in f]

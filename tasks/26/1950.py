@@ -15,3 +15,5 @@ print(
     min([a for a, b in students.items() if b == max(students.values(), key=len)]),
     len(max(students.values(), key=len)),
 )
+
+# Solved by София

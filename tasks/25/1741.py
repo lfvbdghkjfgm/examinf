@@ -43,3 +43,26 @@ for x in range(1861, 10**10, 1861):
             M = max(l) + min(l)
             if str(M)[-2:] == "52":
                 print(x, max(l))
+
+# Solved by Аня
+
+
+import fnmatch
+
+
+def dels(d):
+    s = []
+    for x in range(2, int(d**0.5) + 1):
+        if d % x == 0:
+            s.append(x)
+            s.append(d // x)
+    return sorted(set(s))
+
+
+for x in range(1861, 10**10, 1861):
+    if fnmatch.fnmatch(str(x), "3?67*2?1"):
+        n = dels(x)
+        if len(n) > 0:
+            m = n[0] + n[-1]
+            if str(m)[-2:] == "52":
+                print(x, max(n))

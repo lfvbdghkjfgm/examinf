@@ -3,7 +3,6 @@
 
 from itertools import product
 
-
 for a in range(5000):
     flag = True
     for x, y in product(range(1000), repeat=2):

@@ -38,3 +38,13 @@ s = open("1863_1.txt").readline()
 m = re.findall(r"(?:[1-9][0-9]+[+]){14}[1-9][0-9]+", s)
 print(len(max(m, key=len)))
 print(max(m, key=len))
+
+# Solved by Анастасия
+
+
+import re
+
+m = open("1863.txt").readline()
+s = re.findall(r"(?:[1-9]+[+]){14}[1-9]+", m)
+print(max(s, key=len))
+print(len(max(s, key=len)))
