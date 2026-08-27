@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 # СЂРµС€РµРЅРёРµ 1
 import re

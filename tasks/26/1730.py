@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 nums = [int(x) for x in open(r"C:\Users\aatop\Downloads\1730_3.txt")]
 ct = 9

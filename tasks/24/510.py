@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 import re
 from tqdm import tqdm

@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 nums = [int(i) for i in open("1")]
 

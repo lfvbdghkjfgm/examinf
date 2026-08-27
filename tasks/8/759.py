@@ -34,3 +34,16 @@ for x in itertools.product("012345678", repeat=6):
     ):
         ct += 1
 print(ct)
+
+# Solved by Виктор Г.
+
+
+import itertools
+
+k = ["2", "3"]
+o = 0
+for i in itertools.product("012345768", repeat=6):
+    i = "".join(i)
+    if int(i[0]) % 2 == 0 and i[-1] not in k and i.count("1") >= 2 and i[0] != "0":
+        o += 1
+print(o)

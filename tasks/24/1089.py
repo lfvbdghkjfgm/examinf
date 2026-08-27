@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 with open("/home/student/Загрузки/1089_1.txt") as f:
     text = f.read()

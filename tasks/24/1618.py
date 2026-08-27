@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 text = open(r"C:\Users\aatop\Downloads\1618_1.txt").readlines()
 

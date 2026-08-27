@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 data = [[int(i) for i in x.split()] for x in open("1823_1.txt")]
 data = data[1:]

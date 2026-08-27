@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 nums = [[int(i) for i in j.split(";")] for j in open("413_1.csv")]
 res = 0

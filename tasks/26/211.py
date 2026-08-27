@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 nums = [[int(i) for i in x.split()] for x in open("1.txt")]
 k = nums[0][1]

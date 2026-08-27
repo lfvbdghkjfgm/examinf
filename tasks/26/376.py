@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 k = 8
 data = [[int(i) for i in x.split()] for x in open("1.txt")]

@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 nums = [int(i) for i in open("1.txt")]
 glob = min([i for i in nums if i > 0 and i % 1000 == 102])

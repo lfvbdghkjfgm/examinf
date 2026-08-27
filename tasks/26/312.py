@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 # РРµС€РµРЅРёРµ 1
 nums = [int(x) for x in open("1.txt")]

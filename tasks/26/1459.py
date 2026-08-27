@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 nums = [
     [int(i) for i in x.split()] for x in open(r"C:\Users\aatop\Downloads\1459_1.txt")

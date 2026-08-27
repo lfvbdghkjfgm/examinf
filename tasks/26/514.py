@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 text = [[int(i) for i in x.split()] for x in open(r"C:\Users\111\Downloads\514_3.txt")]
 data = {}

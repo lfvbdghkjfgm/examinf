@@ -1,5 +1,6 @@
 # Solved by lfvbdghkjfgm
 # https://lfvb.ru
+# More solves: https://github.com/lfvbdghkjfgm/examinf
 
 data = [i.split() for i in open("1.txt")]
 data = [[int(a), int(b), c[1:]] for a, b, c in data]
